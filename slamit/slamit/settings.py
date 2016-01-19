@@ -72,7 +72,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 AUTHENTICATION_BACKENDS = (
 
 
-    'backends.PmtBackend.PmtUsersBackend',
+    'backend.backends.SlamitsBackend',
     'django.contrib.auth.backends.ModelBackend',
 
 
@@ -82,10 +82,20 @@ AUTHENTICATION_BACKENDS = (
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.mysql',
+        # Or path to database file if using sqlite3.
+        'NAME': 'slamit_db',
+        # The following settings are not used with sqlite3:
+        'USER': 'root',
+        'PASSWORD': '',
+        # Empty for localhost through domain sockets or '127.0.0.1' for localhost
+        # through TCP.
+        'HOST': 'localhost',
+        'PORT': '',                      # Set to empty string for default.
     }
 }
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
