@@ -13,7 +13,7 @@ from django.db import models
 
 
 class GlobalUsers(models.Model):
-    gus_user_id = models.IntegerField(primary_key=True)
+    gus_user_id = models.AutoField(primary_key=True)
     gus_username = models.CharField(max_length=20)
     gus_age = models.IntegerField()
     gus_address = models.CharField(max_length=100, blank=True)

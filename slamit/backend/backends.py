@@ -14,7 +14,7 @@ class SlamitsBackend:
             user = GlobalUsers.objects.get(gus_username=username, gus_isused=0)
 
             #  Check the password is the reverse of the username
-            if check_password(password, user.gus_pwd):
+            if check_password(password, user.gus_password):
             #     # Yes? return the Django user object
                 return user
             else:
