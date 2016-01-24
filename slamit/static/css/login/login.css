@@ -13,7 +13,7 @@ body {
 	background-image:url(/media/images/login/right.png);
 	min-height: 500px;
 	background-repeat:no-repeat;
-	background-position:38px 175px ;
+	background-position: center 173px ;
 }
 nav {
 	background-color: transparent;
@@ -26,9 +26,11 @@ nav {
 
 
 /*media querries */
-@media screen and (max-width: 993px) {
+@media screen and (max-width: 993px) and (min-width: 900px) {
    /*media querry for body part*/
-
+ #notedpad-dashed-box {
+ margin-left:35.333333333333% !important;
+ }
 
 
 
